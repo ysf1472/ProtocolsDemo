@@ -1,6 +1,12 @@
 protocol canFly {
     func fly()
 }
+//create a defualt value for the fly protocol so that you do not need to call them all the time from structs or classes
+extension canFly{
+    func fly(){
+        print("")
+    }
+}
 class Bird  {
     var isFemale = true
     func layEgg() {
@@ -11,9 +17,10 @@ class Bird  {
    
 }
 class Eagle : Bird , canFly {
-    func fly() {
-        print("The eagle flaps its wings and lifts off into the sky.")
-    }
+    // eagle should work fine Since we have a default code (extention) for protocol
+//    func fly() {
+//        print("The eagle flaps its wings and lifts off into the sky.")
+//    }
     
     func soar(){
         print("The eagle glides in the air using air currents.")
