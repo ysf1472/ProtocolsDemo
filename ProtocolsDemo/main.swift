@@ -1,10 +1,12 @@
+//Created by Yusuf Hekimoglu by june 16 2022
+//Modified by YH june 20 2022
 protocol canFly {
     func fly()
 }
 //create a defualt value for the fly protocol so that you do not need to call them all the time from structs or classes
 extension canFly{
     func fly(){
-        print("")
+        print("The object takes off into the air.")
     }
 }
 class Bird  {
